@@ -6,34 +6,50 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/main.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
 <body>
 
-  <nav role="navigation" class="wrapper">
-    <img src="images/logo.svg" alt="Rachel Norman logo" class="logo">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="designs.html">Designs</a></li>
-    </ul>
-  </nav>
+  <header role="banner">
+    <section class="navigation">
+      <img src="images/logo.svg" alt="Rachel Norman logo" class="logo">
 
-  <header role="banner" class="hero-banner">
-    <h1>Rachel Norman</h1>
-    <p>Student Graphic Designer</p>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span class="material-icons-outlined">menu</span>
+      </label>
+
+      <nav role="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="designs.html">Designs</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="hero-banner">
+      <h1>Rachel Norman</h1>
+      <p>Student Graphic Designer</p>
+    </section>
   </header>
 
-  <main role="main" class="wrapper">
+  <main role="main">
     <article class="recent-designs">
       <h2>Recent Designs</h2>
+
       <section class="recent-designs-images">
         <img src="images/raptors.jpg" alt="Toronto Raptors logo Graphic">
         <img src="images/visual-harmony.jpg" alt="Magazine Layout">
+        <h2>Toronto Raptors</h2>
+        <h2>Visual Harmony</h2>
+        <p>Description</p>
+        <p>Description</p>
       </section>
     </article>
   </main>
 
-  <footer role="contentinfo" class="wrapper">
+  <footer role="contentinfo">
     <small>© Rachel Norman 2022</small>
     <section class="icons">
       <img src="images/instagram-icon.svg" alt="instagram icon">

@@ -9,16 +9,26 @@
 </head>
 <body>
 
-  <nav role="navigation" class="wrapper">
-    <img src="images/logo.svg" alt="Rachel Norman logo" class="logo">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="designs.html">Designs</a></li>
-    </ul>
-  </nav>
+  <header role="banner">
+    <section class="navigation">
+      <img src="images/logo.svg" alt="Rachel Norman logo" class="logo">
 
-  <main role="main" class="wrapper">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span class="material-icons-outlined">menu</span>
+      </label>
+
+      <nav role="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="designs.html">Designs</a></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <main role="main">
     <h1 class="designs">Designs</h1>
 
     <ol>
@@ -66,7 +76,7 @@
     </ol>
   </main>
 
-  <footer role="contentinfo" class="wrapper">
+  <footer role="contentinfo">
     <small>© Rachel Norman 2022</small>
     <section class="icons">
       <img src="images/instagram-icon.svg" alt="instagram icon">

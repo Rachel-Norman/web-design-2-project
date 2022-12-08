@@ -72,6 +72,8 @@ label.nav-toggle-label {
   top: 0;
   right: 0;
   height: 100%;
+  padding: 0;
+  margin-top: 0;
   margin-right: 1.5rem;
   display: flex;
   align-items: center;
@@ -107,24 +109,142 @@ input.nav-toggle:checked ~ nav a {
   align-items: center;
 }
 
-.hero-banner h1, p {
+.hero-banner h1 {
   margin: 0;
+  margin-top: 2rem;
+  font-size: 2rem;
 }
 
-.recent-designs {
+.hero-banner p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.home-main {
   background-color: #344026;
   padding: 1.5rem;
   margin: 1.5rem 0;
 }
 
-.recent-designs h2, p {
+.home-main h2 {
   color: #fff;
+  padding: 0;
+}
+
+.recent-designs h3, p {
+  color: #fff;
+  padding: 0;
+  margin: 0;
 }
 
 .recent-designs-images img {
   width: 400px;
   height: 250px;
   object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+
+.recent-designs-images .learn-more {
+  display: block;
+  background: #C57F4C;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#symbol {
+  display: none;
+}
+
+#poster {
+  display: none;
+}
+
+#signs {
+  display: none;
+}
+
+#harmony {
+  display: none;
+}
+
+#raptors {
+  display: none;
+}
+
+#acceso {
+  display: none;
+}
+
+.symbol {
+  display: none;
+  transition: 0.5s linear;
+  margin: 1.5rem 0;
+}
+
+.poster {
+  display: none;
+  transition: 0.5s linear;
+  margin: 1.5rem 0;
+}
+
+.signs {
+  display: none;
+  transition: 0.5s linear;
+  margin: 1.5rem 0;
+}
+
+.harmony {
+  display: none;
+  transition: 0.5s linear;
+  margin: 1.5rem 0;
+}
+
+.raptors {
+  display: none;
+  transition: 0.5s linear;
+  margin: 1.5rem 0;
+}
+
+.acceso {
+  display: none;
+  transition: 0.5s linear;
+  margin: 1.5rem 0;
+}
+label {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #C57F4C;
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  cursor: pointer;
+}
+
+#symbol:checked ~ .symbol {
+  display: block;
+}
+
+#poster:checked ~ .poster {
+  display: block;
+}
+
+#signs:checked ~ .signs {
+  display: block;
+}
+
+#harmony:checked ~ .harmony {
+  display: block;
+}
+
+#raptors:checked ~ .raptors {
+  display: block;
+}
+
+#acceso:checked ~ .acceso{
+  display: block;
 }
 
 footer {
@@ -155,7 +275,13 @@ footer .icons img {
   margin-top: 0;
 }
 
-.about-section img {
+.about-section {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+}
+
+.profile-photo {
   width: 300px;
   height: auto;
   margin: 1.5rem;
@@ -179,7 +305,7 @@ footer .icons img {
 
 .contact dl {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, .25fr);
   grid-template-rows: repeat(2, 1fr);
   align-items: center;
 }
@@ -233,6 +359,41 @@ footer .icons img {
   color: #344026;
 }
 
+#check-1 {
+  display: none;
+}
+
+#check-2 {
+  display: none;
+}
+
+.content-1 {
+  display: none;
+  transition: 0.5s linear;
+  margin: 1.5rem 0;
+}
+
+.content-2 {
+  display: none;
+  transition: 0.5s linear;
+  margin: 1.5rem 0;
+}
+
+label {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #C57F4C;
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  cursor: pointer;
+}
+
+#check-1:checked ~ .content-1 {
+  display: block;
+}
+
 @media screen and (min-width: 768px) {
 
   input.nav-toggle {
@@ -263,25 +424,43 @@ footer .icons img {
     margin: 0 1.5rem;
   }
 
-  .recent-designs {
+  .home-main h2 {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
 
-  .recent-designs-images {
+  .recent-designs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3,1fr);
-    gap: 1.5rem;
+    column-gap: 1.5rem;
+    row-gap: 0;
   }
 
+}
+
+@media screen and (min-width: 1280px) {
+
   .about-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+  }
+
+  .profile-photo {
+    min-width: 400px;
+    height: auto;
     margin: 1.5rem;
+  }
+
+  .text {
+    min-width: 400px;
+    height: auto
+  }
+
+  .contact {
+    min-width: 400px;
+    height: auto;
   }
 
   .designs ol {
@@ -291,5 +470,4 @@ footer .icons img {
     gap: 1.5rem;
     align-items: center;
   }
-
 }
